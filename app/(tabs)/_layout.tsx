@@ -3,26 +3,59 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
     return (
-        <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+        <Tabs 
+            screenOptions={{
+                tabBarActiveTintColor: '#fff', // blue-500
+                tabBarInactiveTintColor: '#f2f2f2', // gray-500
+                tabBarLabelStyle: { 
+                    fontFamily: 'CAIXASTD_Bold',
+                    fontSize: 14,
+                    fontWeight: '600'
+                },
+                tabBarStyle: {
+                    backgroundColor: '#005CA9', // bg-gray-800 como exemplo
+                    borderTopColor: '#374151', // border-gray-700
+                },
+                headerShown: false, // Remove o header se não precisar
+            }}
+        >
             <Tabs.Screen
                 name="index"
                 options={{
                     title: 'Home',
-                    tabBarIcon: ({ color }) => <MaterialIcons size={28} name="home" color={color} />,
+                    tabBarIcon: ({ color, focused }) => (
+                        <MaterialIcons 
+                            size={focused ? 30 : 28} 
+                            name="home" 
+                            color={color} 
+                        />
+                    ),
                 }}
             />
             <Tabs.Screen
                 name="contratar"
                 options={{
                     title: 'Contratar',
-                    tabBarIcon: ({ color }) => <MaterialIcons size={28} name="request-quote" color={color} />,
+                    tabBarIcon: ({ color, focused }) => (
+                        <MaterialIcons 
+                            size={focused ? 30 : 28} 
+                            name="request-quote" 
+                            color={color} 
+                        />
+                    ),
                 }}
             />
             <Tabs.Screen
                 name="emprestimos"
                 options={{
-                    title: 'Emprestimos',
-                    tabBarIcon: ({ color }) => <MaterialIcons size={28} name="receipt-long" color={color} />,
+                    title: 'Empréstimos',
+                    tabBarIcon: ({ color, focused }) => (
+                        <MaterialIcons 
+                            size={focused ? 30 : 28} 
+                            name="receipt-long" 
+                            color={color} 
+                        />
+                    ),
                 }}
             />
         </Tabs>
