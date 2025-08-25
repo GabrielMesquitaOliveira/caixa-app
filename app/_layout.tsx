@@ -1,4 +1,6 @@
 import { Header } from "@/components/Header";
+import "@/app/global.css";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import React from "react";
@@ -13,8 +15,8 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ header: Header }} />
-    </Stack>
+    <GluestackUIProvider mode="light"><Stack>
+        <Stack.Screen name="(tabs)" options={{ header: Header }} />
+      </Stack></GluestackUIProvider>
   );
 }
