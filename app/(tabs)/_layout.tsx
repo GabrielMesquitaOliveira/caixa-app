@@ -14,7 +14,6 @@ export default function TabLayout() {
                 },
                 tabBarStyle: {
                     backgroundColor: '#005CA9', // bg-gray-800 como exemplo
-                    borderTopColor: '#374151', // border-gray-700
                 },
                 headerShown: false, // Remove o header se não precisar
             }}
