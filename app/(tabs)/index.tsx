@@ -1,7 +1,6 @@
+import { Produto, produtosService } from "@/services";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Alert, FlatList, Text, View } from "react-native";
-import { produtosService } from '../services';
-import { Produto } from '../types';
 
 export default function Index() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
