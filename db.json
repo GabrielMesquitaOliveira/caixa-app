@@ -1,0 +1,212 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "CAIXA Tem Empréstimo Pessoal",
+      "taxaJurosAnual": 18.5,
+      "prazoMinimo": 6,
+      "prazoMaximo": 60,
+      "valorMinimo": 1000,
+      "valorMaximo": 100000,
+      "descricao": "Empréstimo pessoal com taxas competitivas",
+      "categoria": "pessoa_fisica"
+    },
+    {
+      "id": "2",
+      "nome": "CAIXA Tem Crédito Consignado",
+      "taxaJurosAnual": 12.8,
+      "prazoMinimo": 12,
+      "prazoMaximo": 84,
+      "valorMinimo": 2000,
+      "valorMaximo": 200000,
+      "descricao": "Crédito consignado para aposentados e pensionistas",
+      "categoria": "consignado"
+    },
+    {
+      "id": "3",
+      "nome": "CAIXA Tem Microcrédito PJ",
+      "taxaJurosAnual": 15.2,
+      "prazoMinimo": 6,
+      "prazoMaximo": 48,
+      "valorMinimo": 5000,
+      "valorMaximo": 50000,
+      "descricao": "Microcrédito para pessoa jurídica",
+      "categoria": "pessoa_juridica"
+    },
+    {
+      "id": "4",
+      "nome": "CAIXA Tem Crediário",
+      "taxaJurosAnual": 22.4,
+      "prazoMinimo": 3,
+      "prazoMaximo": 24,
+      "valorMinimo": 500,
+      "valorMaximo": 15000,
+      "descricao": "Crediário para compras diversas",
+      "categoria": "crediario"
+    }
+  ],
+  "contratados": [
+    {
+      "id": "1",
+      "produtoId": 1,
+      "produto": {
+        "id": 1,
+        "nome": "CAIXA Tem Empréstimo Pessoal",
+        "taxaJurosAnual": 18.5
+      },
+      "nomePersonalizado": "Empréstimo para Equipamentos",
+      "valorContratado": 15000,
+      "prazoContratado": 24,
+      "dataContratacao": "2025-07-15T10:00:00.000Z",
+      "numeroContrato": "2025071500001",
+      "status": "ativo",
+      "observacoes": "Compra de equipamentos para oficina mecânica",
+      "clienteId": "12345678901"
+    },
+    {
+      "id": "2",
+      "produtoId": 2,
+      "produto": {
+        "id": 2,
+        "nome": "CAIXA Tem Crédito Consignado",
+        "taxaJurosAnual": 12.8
+      },
+      "nomePersonalizado": "Reforma da Casa",
+      "valorContratado": 35000,
+      "prazoContratado": 48,
+      "dataContratacao": "2025-06-10T09:30:00.000Z",
+      "numeroContrato": "2025061000002",
+      "status": "ativo",
+      "observacoes": "Reforma completa da residência",
+      "clienteId": "12345678901"
+    }
+  ],
+  "simulacoes": [
+    {
+      "id": "1",
+      "contratadoId": 1,
+      "contrato": {
+        "id": 1,
+        "nomePersonalizado": "Empréstimo para Equipamentos",
+        "taxaJurosAnual": 18.5,
+        "prazoMaximo": 60
+      },
+      "valorSimulado": 25000,
+      "prazoSimulado": 30,
+      "taxaJurosMensal": 1.4294,
+      "valorParcelaMensal": 946.67,
+      "valorTotalComJuros": 28400.1,
+      "sistemaAmortizacao": "PRICE",
+      "memoriaCalculo": [
+        {
+          "mes": 1,
+          "juros": 357.35,
+          "amortizacao": 589.32,
+          "saldoDevedor": 24410.68,
+          "valorParcela": 946.67
+        },
+        {
+          "mes": 2,
+          "juros": 348.93,
+          "amortizacao": 597.74,
+          "saldoDevedor": 23812.94,
+          "valorParcela": 946.67
+        },
+        {
+          "mes": 3,
+          "juros": 340.39,
+          "amortizacao": 606.28,
+          "saldoDevedor": 23206.66,
+          "valorParcela": 946.67
+        }
+      ],
+      "criadoEm": "2025-08-22T14:30:00.000Z",
+      "clienteId": "12345678901"
+    },
+    {
+      "id": "2",
+      "contratadoId": 2,
+      "contrato": {
+        "id": 2,
+        "nomePersonalizado": "Reforma da Casa",
+        "taxaJurosAnual": 12.8,
+        "prazoMaximo": 84
+      },
+      "valorSimulado": 50000,
+      "prazoSimulado": 60,
+      "taxaJurosMensal": 1.0113,
+      "valorParcelaMensal": 1087.45,
+      "valorTotalComJuros": 65247,
+      "sistemaAmortizacao": "PRICE",
+      "memoriaCalculo": [
+        {
+          "mes": 1,
+          "juros": 505.65,
+          "amortizacao": 581.8,
+          "saldoDevedor": 49418.2,
+          "valorParcela": 1087.45
+        },
+        {
+          "mes": 2,
+          "juros": 499.77,
+          "amortizacao": 587.68,
+          "saldoDevedor": 48830.52,
+          "valorParcela": 1087.45
+        }
+      ],
+      "criadoEm": "2025-08-22T16:15:00.000Z",
+      "clienteId": "12345678901"
+    },
+    {
+      "id": "5723",
+      "contratadoId": null,
+      "contrato": {
+        "id": "3",
+        "nomePersonalizado": "Simulação CAIXA Tem Microcrédito PJ",
+        "taxaJurosAnual": 15.2,
+        "prazoMaximo": 48
+      },
+      "valorSimulado": 10000,
+      "prazoSimulado": 24,
+      "taxaJurosMensal": 1.2667,
+      "valorParcelaMensal": 485.82,
+      "valorTotalComJuros": 11659.61,
+      "sistemaAmortizacao": "PRICE",
+      "memoriaCalculo": [
+        {
+          "mes": 1,
+          "juros": 126.67,
+          "amortizacao": 359.15,
+          "saldoDevedor": 9640.85,
+          "valorParcela": 485.82
+        },
+        {
+          "mes": 2,
+          "juros": 122.12,
+          "amortizacao": 363.7,
+          "saldoDevedor": 9277.15,
+          "valorParcela": 485.82
+        },
+        {
+          "mes": 3,
+          "juros": 117.51,
+          "amortizacao": 368.31,
+          "saldoDevedor": 8908.84,
+          "valorParcela": 485.82
+        }
+      ],
+      "criadoEm": "2025-08-24T03:13:24.009Z",
+      "clienteId": "12345678901"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Lucas Silva",
+      "email": "lucas.silva@email.com",
+      "telefone": "(61) 99999-9999",
+      "profissao": "Microempreendedor",
+      "criadoEm": "2025-06-01T08:00:00.000Z"
+    }
+  ]
+}
