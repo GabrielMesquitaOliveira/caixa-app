@@ -3,17 +3,20 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
     return (
-        <Tabs 
+        <Tabs
             screenOptions={{
                 tabBarActiveTintColor: '#fff', // blue-500
                 tabBarInactiveTintColor: '#f2f2f2', // gray-500
-                tabBarLabelStyle: { 
+                tabBarLabelStyle: {
                     fontFamily: 'CAIXASTD_Bold',
                     fontSize: 14,
                     fontWeight: '600'
                 },
                 tabBarStyle: {
-                    backgroundColor: '#005CA9', // bg-gray-800 como exemplo
+                    backgroundColor: '#005CA9', // bg-gray-800 como exemplo 
+                },
+                tabBarIconStyle: {
+                    marginBottom: 2,
                 },
                 headerShown: false, // Remove o header se não precisar
             }}
@@ -23,10 +26,10 @@ export default function TabLayout() {
                 options={{
                     title: 'Home',
                     tabBarIcon: ({ color, focused }) => (
-                        <MaterialIcons 
-                            size={focused ? 30 : 28} 
-                            name="home" 
-                            color={color} 
+                        <MaterialIcons
+                            size={focused ? 30 : 28}
+                            name="home"
+                            color={color}
                         />
                     ),
                 }}
@@ -36,10 +39,10 @@ export default function TabLayout() {
                 options={{
                     title: 'Contratar',
                     tabBarIcon: ({ color, focused }) => (
-                        <MaterialIcons 
-                            size={focused ? 30 : 28} 
-                            name="request-quote" 
-                            color={color} 
+                        <MaterialIcons
+                            size={focused ? 30 : 28}
+                            name="request-quote"
+                            color={color}
                         />
                     ),
                 }}
@@ -49,10 +52,10 @@ export default function TabLayout() {
                 options={{
                     title: 'Empréstimos',
                     tabBarIcon: ({ color, focused }) => (
-                        <MaterialIcons 
-                            size={focused ? 30 : 28} 
-                            name="receipt-long" 
-                            color={color} 
+                        <MaterialIcons
+                            size={focused ? 30 : 28}
+                            name="receipt-long"
+                            color={color}
                         />
                     ),
                 }}

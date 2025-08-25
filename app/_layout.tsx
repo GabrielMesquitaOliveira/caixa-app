@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import React from "react";
@@ -13,7 +14,7 @@ export default function RootLayout() {
   if (!fontsLoaded) return null;
   return (
     <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ header: Header }} />
     </Stack>
   );
 }
