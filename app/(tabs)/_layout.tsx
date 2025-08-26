@@ -1,7 +1,9 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import * as NavigationBar from 'expo-navigation-bar';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
+    NavigationBar.setButtonStyleAsync("light");
     return (
         <Tabs
             screenOptions={{

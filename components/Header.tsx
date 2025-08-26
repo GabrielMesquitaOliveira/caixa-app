@@ -70,7 +70,7 @@ export function Header({
 
         {/* Center - Numero da conta ou título */}
         <View className="flex-1 items-center justify-center">
-          <Text className="text-white text-base font-bold">
+          <Text className="text-white text-2xl font-bold">
             {showAccountNumber ? numeroConta : title}
           </Text>
         </View>
