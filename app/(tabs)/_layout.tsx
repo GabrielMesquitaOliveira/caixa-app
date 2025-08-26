@@ -15,7 +15,6 @@ export default function TabLayout() {
         CAIXASTD_ExtraBold: require('../../assets/fonts/CAIXAStd-ExtraBold.ttf'),
     });
 
-    if (!fontsLoaded) return console.log("Carregando fontes...");
     return (
         <Tabs
             screenOptions={{
