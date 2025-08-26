@@ -1,9 +1,21 @@
+import "@/app/global.css";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useFonts } from 'expo-font';
 import * as NavigationBar from 'expo-navigation-bar';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
     NavigationBar.setButtonStyleAsync("light");
+
+    const [fontsLoaded] = useFonts({
+        CAIXASTD_Regular: require('../../assets/fonts/CAIXAStd-Regular.ttf'),
+        CAIXASTD_Bold: require('../../assets/fonts/CAIXAStd-Bold.ttf'),
+        CAIXASTD_Light: require('../../assets/fonts/CAIXAStd-Light.ttf'),
+        CAIXASTD_SemiBold: require('../../assets/fonts/CAIXAStd-SemiBold.ttf'),
+        CAIXASTD_ExtraBold: require('../../assets/fonts/CAIXAStd-ExtraBold.ttf'),
+    });
+
+    if (!fontsLoaded) return console.log("Carregando fontes...");
     return (
         <Tabs
             screenOptions={{

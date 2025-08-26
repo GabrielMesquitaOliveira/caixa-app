@@ -3,6 +3,7 @@ import React from "react";
 import { Text, View } from "react-native";
 
 export default function Index() {
+
   return (
     <View className="h-full w-full flex items-center justify-top bg-neutral-100">
 
@@ -16,20 +17,20 @@ export default function Index() {
               }}
             />
           </Avatar>
-          <Text className="text-3xl font-bold text-white">Olá, Adriana</Text>
+          <Text className="text-4xl font-semibold text-white">Olá, Joana</Text>
         </View>
       </View>
 
       {/* Saldo devedor */}
-      <View className="w-4/5 h-1/3 rounded-2xl bg-white flex flex-row items-center justify-center -mt-24 p-4">
-        <View className="w-1/2 flex flex-col justify-center">
-          <Text className="text-xl font-regular">Saldo Devedor</Text>
-          <Text className="text-2xl font-bold">R$ 51.300,00</Text>
+      <View className="w-11/12 h-1/3 rounded-2xl bg-white flex flex-row items-center justify-center -mt-24 p-6">
+        <View className="w-2/3 flex flex-col justify-center">
+          <Text className="text-xl font-semibold">Saldo Devedor</Text>
+          <Text className="text-3xl font-semibold">R$ 51.300,00</Text>
         </View>
-        <View className="w-1/2 flex flex-col h-full justify-center">
+        <View className="w-1/3 flex flex-col h-full justify-center">
           {/* grafico do saldo devedor */}
           
-          <Text className="text-2xl font-bold">R$ 1.000,00</Text>
+          <Text className="text-2xl font-semibold">R$ 1.000,00</Text>
         </View>
       </View>
 

@@ -1,20 +1,10 @@
-import "@/app/global.css";
 import { Header } from "@/components/Header";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
-import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 
 export default function RootLayout() {
-
-  const [fontsLoaded] = useFonts({
-    CAIXASTD_Regular: require('../assets/fonts/CAIXAStd-Regular.ttf'),
-    CAIXASTD_Bold: require('../assets/fonts/CAIXAStd-Bold.ttf'),
-    CAIXASTD_Light: require('../assets/fonts/CAIXAStd-Light.ttf'),
-  });
-
-  if (!fontsLoaded) return null;
   return (
     <GluestackUIProvider mode="light">
       <Stack>

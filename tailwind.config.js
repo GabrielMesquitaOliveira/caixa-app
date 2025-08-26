@@ -170,13 +170,12 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: undefined,
-        body: undefined,
-        mono: undefined,
         roboto: ['Roboto', 'sans-serif'],
-        sans: ["CAIXASTD_Regular"],  // Fonte padrão
+        sans: ["CAIXASTD_Regular"], 
         bold: ["CAIXASTD_Bold"],
         light: ["CAIXASTD_Light"],
+        semibold: ["CAIXASTD_SemiBold"],
+        extrabold: ["CAIXASTD_ExtraBold"],
       },
       fontWeight: {
         extrablack: '950',

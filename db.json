@@ -57,11 +57,17 @@
       "nomePersonalizado": "Empréstimo para Equipamentos",
       "valorContratado": 15000,
       "prazoContratado": 24,
+      "sistemaAmortizacao": "PRICE",
+      "taxaJurosMensal": 1.4294,
+      "valorParcelaMensal": 715.32,
       "dataContratacao": "2025-07-15T10:00:00.000Z",
+      "dataVencimentoPrimeiraParcela": "2025-08-15T00:00:00.000Z",
       "numeroContrato": "2025071500001",
       "status": "ativo",
+      "parcelasPagas": 2,
+      "totalParcelas": 24,
       "observacoes": "Compra de equipamentos para oficina mecânica",
-      "clienteId": "12345678901"
+      "clienteId": "1"
     },
     {
       "id": "2",
@@ -74,11 +80,103 @@
       "nomePersonalizado": "Reforma da Casa",
       "valorContratado": 35000,
       "prazoContratado": 48,
+      "sistemaAmortizacao": "SAC",
+      "taxaJurosMensal": 1.0113,
+      "valorParcelaMensal": 1087.45,
       "dataContratacao": "2025-06-10T09:30:00.000Z",
+      "dataVencimentoPrimeiraParcela": "2025-07-10T00:00:00.000Z",
       "numeroContrato": "2025061000002",
       "status": "ativo",
+      "parcelasPagas": 3,
+      "totalParcelas": 48,
       "observacoes": "Reforma completa da residência",
-      "clienteId": "12345678901"
+      "clienteId": "1"
+    }
+  ],
+  "parcelas": [
+    {
+      "id": "1",
+      "contratoId": "1",
+      "numeroParcela": 1,
+      "dataVencimento": "2025-08-15T00:00:00.000Z",
+      "valorParcela": 715.32,
+      "valorJuros": 214.41,
+      "valorAmortizacao": 500.91,
+      "saldoDevedor": 14499.09,
+      "dataPagamento": "2025-08-15T14:30:00.000Z",
+      "valorPago": 715.32,
+      "situacao": "paga",
+      "diasAtraso": 0
+    },
+    {
+      "id": "2",
+      "contratoId": "1",
+      "numeroParcela": 2,
+      "dataVencimento": "2025-09-15T00:00:00.000Z",
+      "valorParcela": 715.32,
+      "valorJuros": 207.24,
+      "valorAmortizacao": 508.08,
+      "saldoDevedor": 13991.01,
+      "dataPagamento": "2025-09-14T16:20:00.000Z",
+      "valorPago": 715.32,
+      "situacao": "paga",
+      "diasAtraso": 0
+    },
+    {
+      "id": "3",
+      "contratoId": "1",
+      "numeroParcela": 3,
+      "dataVencimento": "2025-10-15T00:00:00.000Z",
+      "valorParcela": 715.32,
+      "valorJuros": 199.97,
+      "valorAmortizacao": 515.35,
+      "saldoDevedor": 13475.66,
+      "dataPagamento": null,
+      "valorPago": null,
+      "situacao": "pendente",
+      "diasAtraso": 0
+    },
+    {
+      "id": "4",
+      "contratoId": "2",
+      "numeroParcela": 1,
+      "dataVencimento": "2025-07-10T00:00:00.000Z",
+      "valorParcela": 1231.81,
+      "valorJuros": 354.03,
+      "valorAmortizacao": 729.17,
+      "saldoDevedor": 34270.83,
+      "dataPagamento": "2025-07-10T10:15:00.000Z",
+      "valorPago": 1231.81,
+      "situacao": "paga",
+      "diasAtraso": 0
+    },
+    {
+      "id": "5",
+      "contratoId": "2",
+      "numeroParcela": 2,
+      "dataVencimento": "2025-08-10T00:00:00.000Z",
+      "valorParcela": 1224.44,
+      "valorJuros": 346.66,
+      "valorAmortizacao": 729.17,
+      "saldoDevedor": 33541.66,
+      "dataPagamento": "2025-08-09T09:45:00.000Z",
+      "valorPago": 1224.44,
+      "situacao": "paga",
+      "diasAtraso": 0
+    },
+    {
+      "id": "6",
+      "contratoId": "2",
+      "numeroParcela": 3,
+      "dataVencimento": "2025-09-10T00:00:00.000Z",
+      "valorParcela": 1217.07,
+      "valorJuros": 339.29,
+      "valorAmortizacao": 729.17,
+      "saldoDevedor": 32812.49,
+      "dataPagamento": "2025-09-10T11:22:00.000Z",
+      "valorPago": 1217.07,
+      "situacao": "paga",
+      "diasAtraso": 0
     }
   ],
   "simulacoes": [
@@ -121,7 +219,7 @@
         }
       ],
       "criadoEm": "2025-08-22T14:30:00.000Z",
-      "clienteId": "12345678901"
+      "clienteId": "1"
     },
     {
       "id": "2",
@@ -155,7 +253,7 @@
         }
       ],
       "criadoEm": "2025-08-22T16:15:00.000Z",
-      "clienteId": "12345678901"
+      "clienteId": "1"
     },
     {
       "id": "5723",
@@ -196,14 +294,14 @@
         }
       ],
       "criadoEm": "2025-08-24T03:13:24.009Z",
-      "clienteId": "12345678901"
+      "clienteId": "1"
     }
   ],
   "usuarios": [
     {
       "id": "1",
-      "nome": "Lucas Silva",
-      "email": "lucas.silva@email.com",
+      "nome": "Joana Darc",
+      "email": "joana@gmail.com",
       "telefone": "(61) 99999-9999",
       "profissao": "Microempreendedor",
       "criadoEm": "2025-06-01T08:00:00.000Z"
