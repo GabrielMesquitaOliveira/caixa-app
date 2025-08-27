@@ -14,7 +14,7 @@ export interface Parcela {
 }
 
 export interface CreateParcelaRequest {
-  contratoId: number;
+  contratoId: string;
   numeroParcela: number;
   dataVencimento: string;
   valorParcela: number;

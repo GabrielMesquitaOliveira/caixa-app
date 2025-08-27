@@ -17,7 +17,7 @@ export const parcelasService = {
   },
 
   // Buscar parcelas por contrato
-  buscarPorContrato: async (contratoId: number): Promise<Parcela[]> => {
+  buscarPorContrato: async (contratoId: string): Promise<Parcela[]> => {
     const api = await getApiInstance();
     const response = await api.get<Parcela[]>(`/parcelas?contratoId=${contratoId}`);
     return response.data;
@@ -31,14 +31,14 @@ export const parcelasService = {
   },
 
   // Buscar parcelas pagas de um contrato
-  buscarParclasPagasContrato: async (contratoId: number): Promise<Parcela[]> => {
+  buscarParclasPagasContrato: async (contratoId: string): Promise<Parcela[]> => {
     const api = await getApiInstance();
     const response = await api.get<Parcela[]>(`/parcelas?contratoId=${contratoId}&situacao=paga`);
     return response.data;
   },
 
   // Buscar parcelas pendentes de um contrato
-  buscarParcelasPendentesContrato: async (contratoId: number): Promise<Parcela[]> => {
+  buscarParcelasPendentesContrato: async (contratoId: string): Promise<Parcela[]> => {
     const api = await getApiInstance();
     const response = await api.get<Parcela[]>(`/parcelas?contratoId=${contratoId}&situacao=pendente`);
     return response.data;
@@ -130,7 +130,7 @@ export const parcelasService = {
   },
 
   // Estatísticas de parcelas por contrato
-  obterEstatisticasContrato: async (contratoId: number) => {
+  obterEstatisticasContrato: async (contratoId: string) => {
     const parcelas = await parcelasService.buscarPorContrato(contratoId);
     
     const pagas = parcelas.filter(p => p.situacao === 'paga').length;
@@ -163,7 +163,7 @@ export const parcelasService = {
   },
 
   // Gerar parcelas para um contrato (útil para criar todas as parcelas de uma vez)
-  gerarParcelas: async (contratoId: number, valorContrato: number, numParcelas: number, taxaJuros: number, sistemaAmortizacao: 'PRICE' | 'SAC'): Promise<Parcela[]> => {
+  gerarParcelas: async (contratoId: string, valorContrato: number, numParcelas: number, taxaJuros: number, sistemaAmortizacao: 'PRICE' | 'SAC'): Promise<Parcela[]> => {
     const parcelas: CreateParcelaRequest[] = [];
     let saldoDevedor = valorContrato;
     const taxaMensal = taxaJuros / 100;

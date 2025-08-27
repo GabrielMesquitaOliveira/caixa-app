@@ -10,7 +10,7 @@ export interface ParcelaAmortizacao {
 
 export interface Simulacao {
   id: number;
-  contratadoId: number | null;
+  contratadoId: string | null;
   contrato: ContratoResumido;
   valorSimulado: number;
   prazoSimulado: number;

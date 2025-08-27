@@ -9,10 +9,4 @@ export { usuariosService } from './usuariosService';
 export { getApiInstance } from './api/config';
 
 // Exportação dos tipos (re-export para facilitar imports)
-export * from '../types/common';
-export * from '../types/contrato';
-export * from '../types/parcela';
-export * from '../types/produto';
-export * from '../types/simulacao';
-export * from '../types/usuario';
-
+export * from '../types';
