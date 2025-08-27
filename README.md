@@ -1,50 +1,56 @@
-# Welcome to your Expo app 👋
+# Caixa App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descrição
 
-## Get started
+Caixa App é um aplicativo móvel de gestão financeira desenvolvido para o Hackathon Caixa. Permite que os usuários gerenciem seus empréstimos, visualizem resumos financeiros e acompanhem o status de pagamentos em uma interface amigável.
 
-1. Install dependencies
+## Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- Interface intuitiva com saudação personalizada
+- Visão geral das estatísticas financeiras incluindo total pago, valores pendentes e saldo devedor
+- Visualização detalhada de empréstimos com acompanhamento de parcelas
+- Representação visual dos dados financeiros através de gráficos
+- Design responsivo para Android e iOS
 
-2. Start the app
+## Instalação
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Para começar com o Caixa App, clone o repositório e instale as dependências:
 
 ```bash
-npm run reset-project
+git clone https://github.com/GabrielMesquitaOliveira/caixa-app
+cd caixa-app
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Uso
 
-## Learn more
+Primeiro, inicie o servidor JSON para a API:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm run json-server
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Em seguida, em outro terminal, inicie a aplicação usando o Expo:
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+Você pode abrir o app em um build de desenvolvimento, emulador Android, simulador iOS ou Expo Go.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Tecnologias Utilizadas
+
+- React Native
+- Expo
+- TypeScript
+- Gluestack UI
+- Tailwind CSS
+- Jest para testes
+
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request para melhorias ou correções de bugs.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
