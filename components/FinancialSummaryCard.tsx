@@ -72,7 +72,7 @@ export const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ esta
             chartConfig={chartConfig}
             accessor="population"
             backgroundColor="transparent"
-            paddingLeft="0"
+            paddingLeft="20"
             absolute={false}
             hasLegend={false}
           />
