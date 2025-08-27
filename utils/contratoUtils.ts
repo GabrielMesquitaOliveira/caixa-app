@@ -92,7 +92,7 @@ export const calcularTempoRestante = (contrato: Contrato): {
 export const validarDadosContrato = (dados: Partial<Contrato>): string[] => {
     const erros: string[] = [];
 
-    if (dados.valorContratado && dados.valorContratado <= 0) {
+    if (dados.valorContratado !== undefined && dados.valorContratado <= 0) {
         erros.push('Valor contratado deve ser maior que zero');
     }
 

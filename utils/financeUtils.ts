@@ -4,6 +4,16 @@ import { ParcelaAmortizacao } from '../types/simulacao';
 
 // Simular empréstimo (cálculo local)
 export const simularEmprestimo = (valor: number, prazo: number, taxaAnual: number): SimulacaoCalculada => {
+  // Caso especial: taxa zero (sem juros)
+  if (taxaAnual === 0) {
+    const valorParcela = valor / prazo;
+    return {
+      valorParcela: parseFloat(valorParcela.toFixed(2)),
+      valorTotal: parseFloat(valor.toFixed(2)),
+      taxaMensal: 0,
+    };
+  }
+  
   const taxaMensal: number = taxaAnual / 100 / 12;
   const valorParcela: number = (valor * taxaMensal * Math.pow(1 + taxaMensal, prazo)) / 
                       (Math.pow(1 + taxaMensal, prazo) - 1);

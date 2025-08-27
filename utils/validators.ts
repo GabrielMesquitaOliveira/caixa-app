@@ -9,7 +9,11 @@ export const validarEmail = (email: string): boolean => {
 export const validarTelefone = (telefone: string): boolean => {
   // Remove caracteres não numéricos
   const numeroLimpo = telefone.replace(/\D/g, '');
-  return numeroLimpo.length >= 10 && numeroLimpo.length <= 11;
+  
+  // Remove código do país se presente (ex: +55)
+  const numeroSemPais = numeroLimpo.replace(/^55/, '');
+  
+  return numeroSemPais.length >= 10 && numeroSemPais.length <= 11;
 };
 
 export const validarCPF = (cpf: string): boolean => {
