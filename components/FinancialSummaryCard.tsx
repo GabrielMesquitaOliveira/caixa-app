@@ -53,7 +53,7 @@ export const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ esta
   };
 
   return (
-    <View className="w-11/12 mx-auto rounded-2xl bg-white flex flex-row items-center justify-center -mt-24 p-6 shadow-lg">
+    <View className="w-11/12 h-60 mx-auto rounded-2xl bg-white flex flex-row items-center justify-center -mt-20 p-6 shadow-lg">
       <View className="w-2/3 flex flex-col justify-center">
         <Text className="text-xl font-semibold text-gray-700">Saldo Devedor</Text>
         <Text className="text-3xl font-semibold text-red-600">
