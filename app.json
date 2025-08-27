@@ -33,6 +33,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/CAIXAStd-Bold.ttf",
+            "./assets/fonts/CAIXAStd-Regular.ttf",
+            "./assets/fonts/CAIXAStd-Light.ttf",
+            "./assets/fonts/CAIXAStd-SemiBold.ttf",
+            "./assets/fonts/CAIXAStd-ExtraBold.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {

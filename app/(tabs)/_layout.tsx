@@ -1,20 +1,21 @@
 import "@/app/global.css";
+import { useCustomFonts } from "@/hooks/useFonts";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { useFonts } from 'expo-font';
 import * as NavigationBar from 'expo-navigation-bar';
 import { Tabs } from 'expo-router';
+import { ActivityIndicator, View } from "react-native";
 
 export default function TabLayout() {
     NavigationBar.setButtonStyleAsync("light");
+    const fontsLoaded = useCustomFonts();
 
-    const [fontsLoaded] = useFonts({
-        CAIXASTD_Regular: require('../../assets/fonts/CAIXAStd-Regular.ttf'),
-        CAIXASTD_Bold: require('../../assets/fonts/CAIXAStd-Bold.ttf'),
-        CAIXASTD_Light: require('../../assets/fonts/CAIXAStd-Light.ttf'),
-        CAIXASTD_SemiBold: require('../../assets/fonts/CAIXAStd-SemiBold.ttf'),
-        CAIXASTD_ExtraBold: require('../../assets/fonts/CAIXAStd-ExtraBold.ttf'),
-    });
-
+    if (!fontsLoaded) {
+        return (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ActivityIndicator size="large" />
+            </View>
+        );
+    }
     return (
         <Tabs
             screenOptions={{

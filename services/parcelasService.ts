@@ -78,6 +78,22 @@ export const parcelasService = {
     }));
   },
 
+  // Buscar parcelas vencendo este mês
+  buscarVencendoEsteMes: async (): Promise<Parcela[]> => {
+    const api = await getApiInstance();
+    const hoje = new Date();
+    const primeiroDiaMes = new Date(hoje.getFullYear(), hoje.getMonth(), 1);
+    const ultimoDiaMes = new Date(hoje.getFullYear(), hoje.getMonth() + 1, 0);
+    
+    const response = await api.get<Parcela[]>('/parcelas?situacao=pendente');
+    
+    // Filtrar parcelas que vencem este mês
+    return response.data.filter(parcela => {
+      const dataVencimento = new Date(parcela.dataVencimento);
+      return dataVencimento >= primeiroDiaMes && dataVencimento <= ultimoDiaMes;
+    });
+  },
+
   // Criar nova parcela
   criar: async (parcela: CreateParcelaRequest): Promise<Parcela> => {
     const api = await getApiInstance();

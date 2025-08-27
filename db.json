@@ -105,7 +105,7 @@
       "saldoDevedor": 14499.09,
       "dataPagamento": "2025-08-15T14:30:00.000Z",
       "valorPago": 715.32,
-      "situacao": "paga",
+      "situacao": "pendente",
       "diasAtraso": 0
     },
     {
@@ -168,14 +168,14 @@
       "id": "6",
       "contratoId": "2",
       "numeroParcela": 3,
-      "dataVencimento": "2025-09-10T00:00:00.000Z",
+      "dataVencimento": "2025-08-10T00:00:00.000Z",
       "valorParcela": 1217.07,
       "valorJuros": 339.29,
       "valorAmortizacao": 729.17,
       "saldoDevedor": 32812.49,
-      "dataPagamento": "2025-09-10T11:22:00.000Z",
+      "dataPagamento": "2025-08-10T11:22:00.000Z",
       "valorPago": 1217.07,
-      "situacao": "paga",
+      "situacao": "pendente",
       "diasAtraso": 0
     }
   ],

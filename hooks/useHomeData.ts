@@ -9,10 +9,16 @@ export interface EstatisticasContratos {
   percentualPago: number;
 }
 
+export interface ParcelaComContrato extends Parcela {
+  contratoNome?: string;
+  contratoNumero?: string;
+}
+
 export const useHomeData = (userId: number = 1) => {
   const [usuario, setUsuario] = useState<Usuario | null>(null);
   const [contratos, setContratos] = useState<Contrato[]>([]);
   const [parcelas, setParcelas] = useState<Parcela[]>([]);
+  const [parcelasVencendoEsteMes, setParcelasVencendoEsteMes] = useState<ParcelaComContrato[]>([]);
   const [estatisticas, setEstatisticas] = useState<EstatisticasContratos | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,6 +50,31 @@ export const useHomeData = (userId: number = 1) => {
     };
   };
 
+  const carregarParcelasVencendoEsteMes = async (contratos: Contrato[]) => {
+    try {
+      const parcelasVencendo = await parcelasService.buscarVencendoEsteMes();
+      
+      const parcelasComContrato = await Promise.all(
+        parcelasVencendo.map(async (parcela) => {
+          try {
+            const contrato = await contratosService.buscarPorId(parseInt(parcela.contratoId));
+            return {
+              ...parcela,
+              contratoNome: contrato.nomePersonalizado || contrato.produto?.nome,
+              contratoNumero: contrato.numeroContrato
+            };
+          } catch (err) {
+            return parcela;
+          }
+        })
+      );
+
+      setParcelasVencendoEsteMes(parcelasComContrato);
+    } catch (err) {
+      console.error('Erro ao carregar parcelas vencendo este mês:', err);
+    }
+  };
+
   useEffect(() => {
     const carregarDados = async () => {
       try {
@@ -68,6 +99,9 @@ export const useHomeData = (userId: number = 1) => {
         const parcelasFlat = todasParcelas.flat();
         setParcelas(parcelasFlat);
 
+        // Carregar parcelas vencendo este mês
+        await carregarParcelasVencendoEsteMes(contratosEncontrados);
+
         const stats = calcularEstatisticas(contratosEncontrados, parcelasFlat);
         setEstatisticas(stats);
 
@@ -82,5 +116,13 @@ export const useHomeData = (userId: number = 1) => {
     carregarDados();
   }, [userId]);
 
-  return { usuario, contratos, parcelas, estatisticas, loading, error };
+  return { 
+    usuario, 
+    contratos, 
+    parcelas, 
+    parcelasVencendoEsteMes,
+    estatisticas, 
+    loading, 
+    error 
+  };
 };
