@@ -11,7 +11,7 @@ interface ContractsListProps {
 export const ContractsList: React.FC<ContractsListProps> = ({ contratos, parcelas }) => {
   return (
     <View className="w-11/12 mx-auto mt-6 mb-8">
-      <Text className="text-xl font-semibold text-gray-800 mb-4">Seus Empréstimos</Text>
+      <Text className="text-2xl font-semibold text-gray-800 mb-4">Seus Empréstimos</Text>
       
       {contratos.map((contrato) => {
         const parcelasContrato = parcelas.filter(p => p.contratoId === contrato.id);

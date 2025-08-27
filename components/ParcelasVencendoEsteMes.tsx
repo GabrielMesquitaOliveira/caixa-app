@@ -52,7 +52,7 @@ const ParcelasVencendoEsteMes: React.FC<ParcelasVencendoEsteMesProps> = ({ parce
 
   return (
     <View className="w-11/12 mx-auto mt-6 mb-8">
-      <Text className="text-xl font-semibold text-gray-800 mb-4">Parcelas Vencendo Este Mês</Text>
+      <Text className="text-2xl font-semibold text-gray-800 mb-4">Parcelas Vencendo Este Mês</Text>
       <Text className="text-gray-600 mb-6">
         {parcelas.length} parcela{parcelas.length !== 1 ? 's' : ''} encontrada{parcelas.length !== 1 ? 's' : ''}
       </Text>
@@ -68,7 +68,7 @@ const ParcelasVencendoEsteMes: React.FC<ParcelasVencendoEsteMesProps> = ({ parce
                 Parcela {item.numeroParcela} • {item.contratoNumero}
               </Text>
             </View>
-            <Text className={`text-lg font-bold ${getStatusColor(item)}`}>
+            <Text className={`text-lg font-semibold ${getStatusColor(item)}`}>
               {formatarMoeda(item.valorParcela)}
             </Text>
           </View>

@@ -16,7 +16,7 @@ export const ChartLegend: React.FC<ChartLegendProps> = ({ estatisticas }) => {
 
   return (
     <View className="w-11/12 mx-auto mb-8">
-      <Text className="text-lg font-semibold text-gray-800 mb-3">Distribuição Financeira</Text>
+      <Text className="text-2xl font-semibold text-gray-800 mb-3">Distribuição Financeira</Text>
       <View className="bg-white rounded-xl p-4 shadow-md">
         {dadosLegenda.map((item, index) => (
           <View key={index} className="flex flex-row items-center justify-between py-2">

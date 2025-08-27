@@ -3,8 +3,10 @@ import { useHomeData } from '@/hooks/useHomeData';
 import { formatarMoeda } from '@/utils/formatters';
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const EmprestimosScreen: React.FC = () => {
+  const insets = useSafeAreaInsets();
   const { contratos, loading, error } = useHomeData();
 
   if (loading) {
@@ -24,9 +26,9 @@ const EmprestimosScreen: React.FC = () => {
   }
 
   return (
-    <View className="flex-1 bg-gray-50">
+    <View className="flex-1 bg-neutral-100">
       <View className="w-11/12 mx-auto mt-6 mb-8">
-        <Text className="text-2xl font-bold text-gray-800 mb-2">
+        <Text className="text-2xl font-semibold text-gray-800 mb-2">
           Meus Empréstimos
         </Text>
         <Text className="text-gray-600 mb-6">
@@ -41,6 +43,7 @@ const EmprestimosScreen: React.FC = () => {
           </View>
         ) : (
           <FlatList
+            contentContainerStyle={{paddingBottom: insets.bottom + 40}}
             data={contratos}
             keyExtractor={item => item.id.toString()}
             renderItem={({ item }) => (
@@ -55,7 +58,7 @@ const EmprestimosScreen: React.FC = () => {
                     </Text>
                   </View>
                   <View className="items-end">
-                    <Text className="text-lg font-bold text-blue-600">
+                    <Text className="text-lg font-semibold text-blue-600">
                       {formatarMoeda(item.valorContratado)}
                     </Text>
                     <Text className="text-xs text-gray-500">
