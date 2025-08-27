@@ -3,7 +3,7 @@ import { ProdutoResumido } from './produto';
 import { ParcelaAmortizacao } from './simulacao';
 
 export interface CreateContratoRequest {
-  produtoId: number;
+  produtoId: string;
   produto: ProdutoResumido;
   nomePersonalizado: string;
   valorContratado: number;
@@ -53,4 +53,15 @@ export interface ErroApi {
   status?: number;
   mensagem: string;
   dados?: any;
+}
+
+// Interface para dados do formulário multi-step
+export interface FormData {
+  produtoId?: string;
+  valorContratado?: number;
+  prazoContratado?: number;
+  sistemaAmortizacao?: string;
+  dataVencimento?: string;
+  nomePersonalizado?: string;
+  observacoes?: string;
 }

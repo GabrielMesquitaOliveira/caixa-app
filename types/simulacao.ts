@@ -9,7 +9,7 @@ export interface ParcelaAmortizacao {
 }
 
 export interface Simulacao {
-  id: number;
+  id: string;
   contratadoId: string | null;
   contrato: ContratoResumido;
   valorSimulado: number;
@@ -19,6 +19,6 @@ export interface Simulacao {
   valorTotalComJuros: number;
   sistemaAmortizacao: 'PRICE' | 'SAC';
   memoriaCalculo: ParcelaAmortizacao[];
-  criadoEm: string;
+  criado极Em: string;
   clienteId: string;
 }

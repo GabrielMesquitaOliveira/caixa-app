@@ -11,7 +11,7 @@ export const produtosService = {
   },
 
   // Buscar produto por ID
-  buscarPorId: async (id: number): Promise<Produto> => {
+  buscarPorId: async (id: string): Promise<Produto> => {
     const api = await getApiInstance();
     const response = await api.get<Produto>(`/produtos/${id}`);
     return response.data;
@@ -32,14 +32,14 @@ export const produtosService = {
   },
 
   // Atualizar produto
-  atualizar: async (id: number, produto: Partial<Produto>): Promise<Produto> => {
+  atualizar: async (id: string, produto: Partial<Produto>): Promise<Produto> => {
     const api = await getApiInstance();
     const response = await api.put<Produto>(`/produtos/${id}`, produto);
     return response.data;
   },
 
   // Deletar produto
-  deletar: async (id: number): Promise<void> => {
+  deletar: async (id: string): Promise<void> => {
     const api = await getApiInstance();
     await api.delete(`/produtos/${id}`);
   },

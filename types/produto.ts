@@ -1,5 +1,5 @@
 export interface Produto {
-  id: number;
+  id: string;
   nome: string;
   taxaJurosAnual: number;
   prazoMinimo: number;
@@ -11,7 +11,7 @@ export interface Produto {
 }
 
 export interface ProdutoResumido {
-  id: number;
+  id: string;
   nome: string;
   taxaJurosAnual: number;
 }

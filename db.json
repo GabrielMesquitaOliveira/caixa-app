@@ -48,9 +48,9 @@
   "contratados": [
     {
       "id": "1",
-      "produtoId": 1,
+      "produtoId": "1",
       "produto": {
-        "id": 1,
+        "id": "1",
         "nome": "CAIXA Tem Empréstimo Pessoal",
         "taxaJurosAnual": 18.5
       },
@@ -71,9 +71,9 @@
     },
     {
       "id": "2",
-      "produtoId": 2,
+      "produtoId": "2",
       "produto": {
-        "id": 2,
+        "id": "2",
         "nome": "CAIXA Tem Crédito Consignado",
         "taxaJurosAnual": 12.8
       },
@@ -90,6 +90,15 @@
       "parcelasPagas": 3,
       "totalParcelas": 48,
       "observacoes": "Reforma completa da residência",
+      "clienteId": "1"
+    },
+    {
+      "id": "6d24",
+      "produtoId": "1",
+      "valorContratado": "1600",
+      "prazoContratado": "12",
+      "nomePersonalizado": "Casa nova",
+      "observacoes": "",
       "clienteId": "1"
     }
   ],
@@ -184,7 +193,7 @@
       "id": "1",
       "contratadoId": 1,
       "contrato": {
-        "id": 1,
+        "id": "1",
         "nomePersonalizado": "Empréstimo para Equipamentos",
         "taxaJurosAnual": 18.5,
         "prazoMaximo": 60
@@ -225,7 +234,7 @@
       "id": "2",
       "contratadoId": 2,
       "contrato": {
-        "id": 2,
+        "id": "2",
         "nomePersonalizado": "Reforma da Casa",
         "taxaJurosAnual": 12.8,
         "prazoMaximo": 84
@@ -294,6 +303,13 @@
         }
       ],
       "criadoEm": "2025-08-24T03:13:24.009Z",
+      "clienteId": "1"
+    },
+    {
+      "id": "e82a",
+      "valorSimulado": "1600",
+      "prazoSimulado": "12",
+      "sistemaAmortizacao": "PRICE",
       "clienteId": "1"
     }
   ],

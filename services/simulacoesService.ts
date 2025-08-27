@@ -12,7 +12,7 @@ export const simulacoesService = {
   },
 
   // Buscar simulação por ID
-  buscarPorId: async (id: number): Promise<Simulacao> => {
+  buscarPorId: async (id: string): Promise<Simulacao> => {
     const api = await getApiInstance();
     const response = await api.get<Simulacao>(`/simulacoes/${id}`);
     return response.data;
