@@ -1,6 +1,6 @@
+import MultiStepForm from '@/components/MultiStepForm';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import MultiStepForm from '../components/MultiStepForm';
 
 describe('MultiStepForm Component', () => {
   const mockOnSubmit = jest.fn();

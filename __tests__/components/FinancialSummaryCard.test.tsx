@@ -1,7 +1,7 @@
+import { FinancialSummaryCard } from '@/components/FinancialSummaryCard';
 import { EstatisticasContratos } from '@/hooks/useHomeData';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { FinancialSummaryCard } from '../components/FinancialSummaryCard';
 
 describe('FinancialSummaryCard Component', () => {
   const mockEstatisticas: EstatisticasContratos = {

@@ -1,6 +1,6 @@
+import StepTwo from '@/components/StepTwo';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import StepTwo from '../components/StepTwo';
 
 // Mock the useWatch hook
 jest.mock('react-hook-form', () => ({

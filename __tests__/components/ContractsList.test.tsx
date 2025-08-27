@@ -1,7 +1,7 @@
+import { ContractsList } from '@/components/ContractsList';
 import { Contrato, Parcela } from '@/services';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { ContractsList } from '../components/ContractsList';
 
 describe('ContractsList Component', () => {
   const mockContratos: Contrato[] = [

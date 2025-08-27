@@ -1,6 +1,6 @@
+import LoanAccordion from '@/components/LoanAccordion';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import LoanAccordion from '../components/LoanAccordion';
 
 describe('LoanAccordion Component', () => {
   const mockContrato = {

@@ -1,7 +1,7 @@
+import { StatsCards } from '@/components/StatsCards';
 import { EstatisticasContratos } from '@/hooks/useHomeData';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { StatsCards } from '../components/StatsCards';
 
 describe('StatsCards Component', () => {
   const mockEstatisticas: EstatisticasContratos = {

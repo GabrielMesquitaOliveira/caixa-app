@@ -1,7 +1,7 @@
+import { ChartLegend } from '@/components/ChartLegend';
 import { EstatisticasContratos } from '@/hooks/useHomeData';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { ChartLegend } from '../components/ChartLegend';
 
 describe('ChartLegend Component', () => {
   const mockEstatisticas: EstatisticasContratos = {

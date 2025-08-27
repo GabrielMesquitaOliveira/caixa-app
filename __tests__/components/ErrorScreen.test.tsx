@@ -1,6 +1,6 @@
+import { ErrorScreen } from '@/components/ErrorScreen';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { ErrorScreen } from '../components/ErrorScreen';
 
 describe('ErrorScreen Component', () => {
   it('renders correctly with error message', () => {

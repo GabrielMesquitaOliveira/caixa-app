@@ -1,7 +1,7 @@
+import ParcelasVencendoEsteMes from '@/components/ParcelasVencendoEsteMes';
 import { ParcelaComContrato } from '@/hooks/useHomeData';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import ParcelasVencendoEsteMes from '../components/ParcelasVencendoEsteMes';
 
 describe('ParcelasVencendoEsteMes Component', () => {
   const mockParcelas: ParcelaComContrato[] = [

@@ -1,7 +1,7 @@
+import { WelcomeHeader } from '@/components/WelcomeHeader';
 import { Usuario } from '@/services';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { WelcomeHeader } from '../components/WelcomeHeader';
 
 describe('WelcomeHeader Component', () => {
   const mockUsuario: Usuario = {

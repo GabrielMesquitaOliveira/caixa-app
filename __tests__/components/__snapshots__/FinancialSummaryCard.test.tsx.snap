@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinancialSummaryCard Component matches snapshot 1`] = `
+<View
+  className="w-11/12 h-60 mx-auto rounded-2xl bg-white flex flex-row items-center justify-center -mt-40 p-6 shadow-lg"
+>
+  <View
+    className="w-2/3 flex flex-col justify-center"
+  >
+    <Text
+      className="text-xl font-semibold text-gray-700"
+    >
+      Saldo Devedor
+    </Text>
+    <Text
+      className="text-3xl font-semibold text-red-600"
+    >
+      R$ 15.000,00
+    </Text>
+    <Text
+      className="text-sm text-gray-500 mt-1"
+    >
+      3
+       contrato(s) ativo(s)
+    </Text>
+  </View>
+  <View
+    className="w-1/3 flex flex-col h-full justify-center items-center"
+  >
+    <View
+      style={
+        {
+          "height": 120,
+          "padding": 0,
+          "width": 120,
+        }
+      }
+    >
+      <RNSVGSvgView
+        bbHeight={120}
+        bbWidth={120}
+        focusable={false}
+        height={120}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 120,
+              "width": 120,
+            },
+          ]
+        }
+        width={120}
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+          >
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  [
+                    0,
+                    -1,
+                    1,
+                    -1,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={1}
+                name="backgroundGradient"
+                x1={0}
+                x2={120}
+                y1={120}
+                y2={0}
+              />
+              <RNSVGLinearGradient
+                gradient={
+                  [
+                    0,
+                    436207616,
+                    1,
+                    436207616,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={1}
+                name="fillShadowGradientFrom"
+                x1={0}
+                x2={0}
+                y1={0}
+                y2={120}
+              />
+            </RNSVGDefs>
+          </RNSVGGroup>
+          <RNSVGRect
+            fill={
+              {
+                "payload": 0,
+                "type": 0,
+              }
+            }
+            height={120}
+            propList={
+              [
+                "fill",
+              ]
+            }
+            rx={0}
+            ry={0}
+            width="100%"
+            x={0}
+            y={0}
+          />
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+            matrix={
+              [
+                1,
+                0,
+                -0,
+                1,
+                50,
+                60,
+              ]
+            }
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4278190080,
+                  "type": 0,
+                }
+              }
+            >
+              <RNSVGPath
+                d="M 0 -48 A 48 48 0 0 1 47.511429 -6.831112 L 0 0 A 0 0 0 0 0 0 0 Z "
+                fill={
+                  {
+                    "payload": 4280468830,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4278190080,
+                  "type": 0,
+                }
+              }
+            >
+              <RNSVGPath
+                d="M 47.511429 -6.831112 A 48 48 0 0 1 43.662336 19.939921 L 0 0 A 0 0 0 0 0 0 0 Z "
+                fill={
+                  {
+                    "payload": 4294286859,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4278190080,
+                  "type": 0,
+                }
+              }
+            >
+              <RNSVGPath
+                d="M 43.662336 19.939921 A 48 48 0 1 1 -0.0048 -48 L 0 0 A 0 0 0 1 0 0 0 Z "
+                fill={
+                  {
+                    "payload": 4293870660,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;

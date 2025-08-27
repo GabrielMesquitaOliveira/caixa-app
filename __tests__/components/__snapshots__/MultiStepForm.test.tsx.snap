@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiStepForm Component matches snapshot 1`] = `
+<View
+  className="p-4"
+>
+  <View
+    className="flex-row justify-center mb-6"
+  >
+    <View
+      className="w-8 h-8 rounded-full mx-2 flex items-center justify-center bg-blue-500"
+    >
+      <Text
+        className="text-white font-bold"
+      >
+        1
+      </Text>
+    </View>
+    <View
+      className="w-8 h-8 rounded-full mx-2 flex items-center justify-center bg-gray-300"
+    >
+      <Text
+        className="text-white font-bold"
+      >
+        2
+      </Text>
+    </View>
+    <View
+      className="w-8 h-8 rounded-full mx-2 flex items-center justify-center bg-gray-300"
+    >
+      <Text
+        className="text-white font-bold"
+      >
+        3
+      </Text>
+    </View>
+  </View>
+  <View
+    className="flex-1 justify-center items-center"
+  >
+    <ActivityIndicator
+      color="#007AFF"
+      size="large"
+    />
+    <Text
+      className="mt-4 text-gray-600"
+    >
+      Carregando modalidades...
+    </Text>
+  </View>
+</View>
+`;
