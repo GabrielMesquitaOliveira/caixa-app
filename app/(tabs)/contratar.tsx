@@ -66,15 +66,8 @@ export default function Contratar() {
   }
 
   return (
-    <ScrollView className="flex-1 bg-white">
+    <ScrollView className="flex-1 bg-neutral-100">
       <View className="p-4">
-        <Text className="text-2xl font-bold text-center mb-6">
-          Nova Contratação
-        </Text>
-        <Text className="text-gray-600 text-center mb-8">
-          Preencha as informações para simular e contratar seu empréstimo
-        </Text>
-        
         <MultiStepForm
           onSubmit={handleSubmit}
           onCancel={handleCancel}

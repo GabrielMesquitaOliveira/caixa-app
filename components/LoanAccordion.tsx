@@ -42,7 +42,7 @@ const LoanAccordion: React.FC<LoanAccordionProps> = ({ contrato }) => {
           </AccordionTrigger>
         </AccordionHeader>
         <AccordionContent>
-          <View className="space-y-2">
+          <View className="gap-2">
             <View className="flex-row justify-between">
               <AccordionContentText className="text-gray-600">Valor Contratado:</AccordionContentText>
               <AccordionContentText className="font-semibold">{formatarMoeda(contrato.valorContratado)}</AccordionContentText>

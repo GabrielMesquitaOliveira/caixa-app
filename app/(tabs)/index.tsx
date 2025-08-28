@@ -22,7 +22,7 @@ export default function Index() {
   const totalParcelasPendentes = parcelas.filter(p => p.situacao === 'pendente').length;
   return (
     <ScrollView className="h-full w-full bg-neutral-100" contentContainerStyle={{ 
-      paddingBottom: insets.bottom + 120 
+      paddingBottom: insets.bottom + 80 
     }}>
       <WelcomeHeader usuario={usuario} />
       <FinancialSummaryCard estatisticas={estatisticas} />

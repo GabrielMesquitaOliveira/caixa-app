@@ -91,15 +91,6 @@
       "totalParcelas": 48,
       "observacoes": "Reforma completa da residência",
       "clienteId": "1"
-    },
-    {
-      "id": "6d24",
-      "produtoId": "1",
-      "valorContratado": "1600",
-      "prazoContratado": "12",
-      "nomePersonalizado": "Casa nova",
-      "observacoes": "",
-      "clienteId": "1"
     }
   ],
   "parcelas": [

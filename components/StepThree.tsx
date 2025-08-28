@@ -15,13 +15,13 @@ interface StepThreeProps {
 
 const StepThree: React.FC<StepThreeProps> = ({ control, errors, handleSubmit, onNextStep, onPrevious, onCancel, formData }) => {
   return (
-    <View className="space-y-4">
+    <View className="gap-4">
       <Text className="text-xl font-bold mb-4">Aceitar Contrato</Text>
       
       {/* Resumo do Contrato */}
       <View className="bg-blue-50 p-4 rounded-lg">
         <Text className="font-semibold text-lg text-center mb-3">Resumo do Contrato</Text>
-        <View className="space-y-2">
+        <View className="gap-2">
           <Text>Valor do Empréstimo: <Text className="font-semibold">R$ {formData.valorContratado?.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</Text></Text>
           <Text>Prazo: <Text className="font-semibold">{formData.prazoContratado} meses</Text></Text>
           <Text>Sistema de Amortização: <Text className="font-semibold">{formData.sistemaAmortizacao}</Text></Text>

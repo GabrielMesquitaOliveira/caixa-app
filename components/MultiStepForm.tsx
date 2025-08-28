@@ -87,7 +87,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ onSubmit, onCancel }) => 
         {[1, 2, 3].map((stepNumber) => (
           <View
             key={stepNumber}
-            className={`w-8 h-8 rounded-full mx-2 flex items-center justify-center ${
+            className={`w-8 h-8 rounded-full mx-8 flex items-center justify-center ${
               stepNumber <= step ? 'bg-blue-500' : 'bg-gray-300'
             }`}
           >

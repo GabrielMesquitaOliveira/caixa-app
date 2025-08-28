@@ -23,7 +23,7 @@ export const ContractsList: React.FC<ContractsListProps> = ({ contratos, parcela
         return (
           <View key={contrato.id} className="bg-white rounded-xl p-4 shadow-md mb-3">
             <View className="flex flex-row justify-between items-start">
-              <View className="flex-1">
+              <View className="flex-1 w-2/3">
                 <Text className="text-lg font-semibold text-gray-800">
                   {contrato.nomePersonalizado || contrato.produto?.nome}
                 </Text>
@@ -34,7 +34,7 @@ export const ContractsList: React.FC<ContractsListProps> = ({ contratos, parcela
                   Sistema: {contrato.sistemaAmortizacao || 'PRICE'}
                 </Text>
               </View>
-              <View className="items-end">
+              <View className="items-end w-1/3">
                 <Text className="text-lg font-bold text-blue-600">
                   {formatarMoeda(contrato.valorContratado)}
                 </Text>

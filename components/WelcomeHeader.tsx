@@ -12,7 +12,7 @@ export const WelcomeHeader: React.FC<WelcomeHeaderProps> = ({ usuario }) => {
   const getPrimeiroNome = (nome: string) => nome?.split(' ')[0] || 'Usuário';
 
   return (
-    <View className="w-full h-1/4 bg-[#005CA9] rounded-b-2xl">
+    <View className="w-full h-1/6 bg-[#005CA9] rounded-b-2xl">
       <View className="flex flex-row gap-4 items-center justify-center m-8 mt-12">
         <Avatar size="xl">
           <AvatarImage

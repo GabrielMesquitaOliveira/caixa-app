@@ -49,7 +49,7 @@ const EmprestimosScreen: React.FC = () => {
             renderItem={({ item }) => (
               <View className="bg-white rounded-xl p-4 shadow-md mb-4">
                 <View className="flex flex-row justify-between items-start mb-3">
-                  <View className="flex-1">
+                  <View className="flex-1 w-2/3">
                     <Text className="text-lg font-semibold text-gray-800">
                       {item.nomePersonalizado || item.produto?.nome}
                     </Text>
@@ -57,7 +57,7 @@ const EmprestimosScreen: React.FC = () => {
                       Contrato: {item.numeroContrato}
                     </Text>
                   </View>
-                  <View className="items-end">
+                  <View className="items-end w-1/3">
                     <Text className="text-lg font-semibold text-blue-600">
                       {formatarMoeda(item.valorContratado)}
                     </Text>

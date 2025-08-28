@@ -52,18 +52,18 @@ const StepOne: React.FC<StepOneProps> = ({ control, errors, handleSubmit, onNext
       <Text className="text-xl font-bold mb-6 text-center">Escolha sua Modalidade</Text>
       
       <ScrollView className="flex-1">
-        <View className="space-y-4 px-4">
+        <View>
           {produtos.map((produto) => (
             <TouchableOpacity
               key={produto.id}
-              className={`p-4 border rounded-lg ${
+              className={`p-4 border rounded-lg mb-4 shadow-lg ${
                 produtoSelecionado?.id === produto.id
                   ? 'border-blue-500 bg-blue-50'
                   : 'border-gray-300 bg-white'
               }`}
               onPress={() => handleSelecionarProduto(produto)}
             >
-              <Text className="font-semibold text-lg">{produto.nome}</Text>
+              <Text className="font-semibold text-xl">{produto.nome}</Text>
               <Text className="text-gray-600 mt-1">{produto.descricao}</Text>
               <View className="mt-2">
                 <Text className="text-sm text-gray-500">

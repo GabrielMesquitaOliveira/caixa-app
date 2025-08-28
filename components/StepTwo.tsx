@@ -1,9 +1,10 @@
 import { useProdutos } from '@/hooks/useProdutos';
 import { FormData, Produto } from '@/types';
 import { gerarTabelaAmortizacao, simularEmprestimo, validarEmprestimo } from '@/utils/financeUtils';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import React, { useEffect, useState } from 'react';
 import { Control, Controller, FieldErrors, UseFormHandleSubmit, useWatch } from 'react-hook-form';
-import { ActivityIndicator, Button, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Button, Platform, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 interface StepTwoProps {
   control: Control<FormData>;
@@ -12,7 +13,7 @@ interface StepTwoProps {
   onNextStep: (data: Partial<FormData>) => void;
   onPrevious: () => void;
   onCancel: () => void;
-  formData: FormData; // Adicionando a prop formData
+  formData: FormData;
 }
 
 const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNextStep, onPrevious, onCancel, formData }) => {
@@ -21,10 +22,29 @@ const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNext
   const [simulacao, setSimulacao] = useState<any>(null);
   const [tabelaAmortizacao, setTabelaAmortizacao] = useState<any[]>([]);
   const [validacao, setValidacao] = useState<any>({ valido: true, erros: [] });
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   // Watch form values
   const valorContratado = useWatch({ control, name: 'valorContratado' });
   const prazoContratado = useWatch({ control, name: 'prazoContratado' });
+
+  // Função para converter string de data para Date
+  const parseDate = (dateString: string | undefined): Date | null => {
+    if (!dateString) return null;
+    const [day, month, year] = dateString.split('/');
+    if (day && month && year) {
+      return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+    }
+    return null;
+  };
+
+  // Função para formatar Date para string
+  const formatDate = (date: Date): string => {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear().toString();
+    return `${day}/${month}/${year}`;
+  };
 
   useEffect(() => {
     console.log('ProdutoId do formData:', formData.produtoId);
@@ -85,7 +105,7 @@ const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNext
 
   return (
     <ScrollView className="flex-1">
-      <View className="p-4 space-y-6">
+      <View className="p-4 gap-6">
         <Text className="text-xl font-bold text-center">Simulação do Empréstimo</Text>
         
         {/* Informações do Produto */}
@@ -142,7 +162,7 @@ const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNext
             control={control}
             name="sistemaAmortizacao"
             render={({ field: { onChange, value } }) => (
-              <View className="flex-row space-x-4">
+              <View className="flex-row gap-4">
                 <TouchableOpacity
                   className={`px-4 py-3 rounded-lg border ${
                     value === 'PRICE' ? 'bg-blue-100 border-blue-500' : 'border-gray-300'
@@ -167,19 +187,49 @@ const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNext
           )}
         </View>
 
-        {/* Data de Vencimento */}
+        {/* Data de Vencimento com DatePicker */}
         <View>
           <Text className="text-gray-600 mb-2">Data do Primeiro Vencimento</Text>
           <Controller
             control={control}
             name="dataVencimento"
             render={({ field: { onChange, value } }) => (
-              <TextInput
-                className="border border-gray-300 rounded-lg p-3"
-                placeholder="DD/MM/AAAA"
-                value={value}
-                onChangeText={onChange}
-              />
+              <>
+                <TouchableOpacity
+                  className="border border-gray-300 rounded-lg p-3"
+                  onPress={() => setShowDatePicker(true)}
+                >
+                  <Text className={value ? 'text-black' : 'text-gray-400'}>
+                    {value || 'Selecione a data'}
+                  </Text>
+                </TouchableOpacity>
+                
+                {showDatePicker && (
+                  <DateTimePicker
+                    value={parseDate(value) || new Date()}
+                    mode="date"
+                    display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+                    onChange={(event, selectedDate) => {
+                      setShowDatePicker(Platform.OS === 'ios');
+                      if (selectedDate) {
+                        onChange(formatDate(selectedDate));
+                      }
+                    }}
+                    minimumDate={new Date()}
+                  />
+                )}
+                
+                {Platform.OS === 'ios' && showDatePicker && (
+                  <View className="flex-row justify-end mt-2">
+                    <TouchableOpacity
+                      className="bg-blue-500 px-4 py-2 rounded"
+                      onPress={() => setShowDatePicker(false)}
+                    >
+                      <Text className="text-white">Confirmar</Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+              </>
             )}
           />
           {errors.dataVencimento && (
@@ -191,7 +241,7 @@ const StepTwo: React.FC<StepTwoProps> = ({ control, errors, handleSubmit, onNext
         {simulacao && (
           <View className="bg-green-50 p-4 rounded-lg">
             <Text className="font-semibold text-lg text-center mb-3">Resultado da Simulação</Text>
-            <View className="space-y-2">
+            <View className="gap-2">
               <Text>Valor da Parcela: <Text className="font-semibold">R$ {simulacao.valorParcela.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</Text></Text>
               <Text>Valor Total: <Text className="font-semibold">R$ {simulacao.valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</Text></Text>
               <Text>Taxa Mensal: <Text className="font-semibold">{simulacao.taxaMensal}% a.m.</Text></Text>

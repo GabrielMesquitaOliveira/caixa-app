@@ -53,13 +53,13 @@ export const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ esta
   };
 
   return (
-    <View className="w-11/12 h-60 mx-auto rounded-2xl bg-white flex flex-row items-center justify-center -mt-40 p-6 shadow-lg">
+    <View className="w-11/12 h-52 mx-auto rounded-2xl bg-white flex flex-row items-center justify-center -mt-16 p-6 shadow-lg">
       <View className="w-2/3 flex flex-col justify-center">
         <Text className="text-xl font-semibold text-gray-700">Saldo Devedor</Text>
         <Text className="text-3xl font-semibold text-red-600">
           {formatarMoeda(estatisticas.saldoTotalDevedor)}
         </Text>
-        <Text className="text-sm text-gray-500 mt-1">
+        <Text className="text-sm text-gray-600 mt-1">
           {estatisticas.totalContratos} contrato(s) ativo(s)
         </Text>
       </View>
