@@ -1,12 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1756338125988" clover="3.2.0">
-  <project timestamp="1756338125988" name="All files">
-    <metrics statements="199" coveredstatements="138" conditionals="26" coveredconditionals="8" methods="63" coveredmethods="49" elements="288" coveredelements="195" complexity="0" loc="199" ncloc="199" packages="2" files="8" classes="8"/>
-    <package name="services">
-      <metrics statements="178" coveredstatements="136" conditionals="18" coveredconditionals="8" methods="57" coveredmethods="49"/>
+<coverage generated="1756343052544" clover="3.2.0">
+  <project timestamp="1756343052544" name="All files">
+    <metrics statements="550" coveredstatements="494" conditionals="220" coveredconditionals="156" methods="159" coveredmethods="131" elements="929" coveredelements="781" complexity="0" loc="550" ncloc="550" packages="7" files="33" classes="33"/>
+    <package name="caixa-app">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="config.ts" path="/home/Gab/Documentos/GitHub/caixa-app/config.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="caixa-app.assets.fonts">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="CAIXAStd-Bold.ttf" path="/home/Gab/Documentos/GitHub/caixa-app/assets/fonts/CAIXAStd-Bold.ttf">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="CAIXAStd-ExtraBold.ttf" path="/home/Gab/Documentos/GitHub/caixa-app/assets/fonts/CAIXAStd-ExtraBold.ttf">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="CAIXAStd-Light.ttf" path="/home/Gab/Documentos/GitHub/caixa-app/assets/fonts/CAIXAStd-Light.ttf">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="CAIXAStd-Regular.ttf" path="/home/Gab/Documentos/GitHub/caixa-app/assets/fonts/CAIXAStd-Regular.ttf">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="CAIXAStd-SemiBold.ttf" path="/home/Gab/Documentos/GitHub/caixa-app/assets/fonts/CAIXAStd-SemiBold.ttf">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="caixa-app.components">
+      <metrics statements="142" coveredstatements="115" conditionals="114" coveredconditionals="73" methods="45" coveredmethods="33"/>
+      <file name="ChartLegend.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/ChartLegend.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+      </file>
+      <file name="ContractsList.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/ContractsList.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+      <file name="ErrorScreen.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/ErrorScreen.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+      </file>
+      <file name="FinancialSummaryCard.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/FinancialSummaryCard.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="51" count="4" type="cond" truecount="0" falsecount="1"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="55" count="2" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/Header.tsx">
+        <metrics statements="17" coveredstatements="17" conditionals="20" coveredconditionals="19" methods="4" coveredmethods="4"/>
+        <line num="26" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="14" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="14" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="36" count="14" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="14" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="56" count="14" type="stmt"/>
+      </file>
+      <file name="LoadingScreen.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/LoadingScreen.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="MultiStepForm.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/MultiStepForm.tsx">
+        <metrics statements="17" coveredstatements="11" conditionals="12" coveredconditionals="6" methods="4" coveredmethods="2"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="56" count="4" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="77" count="4" type="stmt"/>
+        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="83" count="4" type="stmt"/>
+        <line num="88" count="12" type="stmt"/>
+      </file>
+      <file name="ParcelasVencendoEsteMes.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/ParcelasVencendoEsteMes.tsx">
+        <metrics statements="24" coveredstatements="16" conditionals="18" coveredconditionals="7" methods="4" coveredmethods="4"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="29" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+      </file>
+      <file name="StatsCards.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/StatsCards.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="StepOne.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/StepOne.tsx">
+        <metrics statements="17" coveredstatements="10" conditionals="10" coveredconditionals="5" methods="6" coveredmethods="2"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+      <file name="StepThree.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/StepThree.tsx">
+        <metrics statements="4" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="1"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+      </file>
+      <file name="StepTwo.tsx" path="/home/Gab/Documentos/GitHub/caixa-app/components/StepTwo.tsx">
+        <metrics statements="41" coveredstatements="38" conditionals="38" coveredconditionals="28" methods="12" coveredmethods="9"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="24" type="stmt"/>
+        <line num="20" count="24" type="stmt"/>
+        <line num="21" count="24" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="23" count="24" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="29" count="24" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="31" count="9" type="stmt"/>
+        <line num="32" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="35" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="24" type="stmt"/>
+        <line num="40" count="16" type="cond" truecount="5" falsecount="0"/>
+        <line num="42" count="8" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+        <line num="49" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+        <line num="70" count="8" type="stmt"/>
+        <line num="71" count="8" type="stmt"/>
+        <line num="72" count="8" type="stmt"/>
+        <line num="76" count="24" type="stmt"/>
+        <line num="77" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="78" count="9" type="stmt"/>
+        <line num="86" count="15" type="stmt"/>
+        <line num="104" count="11" type="stmt"/>
+        <line num="124" count="11" type="stmt"/>
+        <line num="145" count="11" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="158" count="0" type="stmt"/>
+        <line num="177" count="11" type="stmt"/>
+        <line num="207" count="0" type="stmt"/>
+        <line num="225" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="caixa-app.hooks">
+      <metrics statements="91" coveredstatements="82" conditionals="15" coveredconditionals="7" methods="29" coveredmethods="21"/>
+      <file name="useFonts.ts" path="/home/Gab/Documentos/GitHub/caixa-app/hooks/useFonts.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+      </file>
+      <file name="useHomeData.ts" path="/home/Gab/Documentos/GitHub/caixa-app/hooks/useHomeData.ts">
+        <metrics statements="50" coveredstatements="44" conditionals="9" coveredconditionals="2" methods="14" coveredmethods="11"/>
+        <line num="17" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="78" count="4" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="110" count="1" type="stmt"/>
+        <line num="112" count="2" type="stmt"/>
+        <line num="116" count="2" type="stmt"/>
+        <line num="119" count="4" type="stmt"/>
+      </file>
+      <file name="useProdutos.ts" path="/home/Gab/Documentos/GitHub/caixa-app/hooks/useProdutos.ts">
+        <metrics statements="35" coveredstatements="32" conditionals="4" coveredconditionals="3" methods="13" coveredmethods="8"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+        <line num="16" count="22" type="stmt"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="20" count="22" type="stmt"/>
+        <line num="21" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="25" count="16" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
+        <line num="29" count="22" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="45" count="22" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="22" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="22" type="stmt"/>
+        <line num="54" count="10" type="stmt"/>
+        <line num="57" count="22" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="87" count="4" type="stmt"/>
+        <line num="89" count="4" type="stmt"/>
+        <line num="91" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="caixa-app.services">
+      <metrics statements="178" coveredstatements="178" conditionals="18" coveredconditionals="14" methods="57" coveredmethods="57"/>
       <file name="contratosService.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/contratosService.ts">
         <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -35,8 +349,8 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="parcelasService.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/parcelasService.ts">
-        <metrics statements="97" coveredstatements="55" conditionals="18" coveredconditionals="8" methods="30" coveredmethods="22"/>
-        <line num="4" count="1" type="stmt"/>
+        <metrics statements="97" coveredstatements="97" conditionals="18" coveredconditionals="14" methods="30" coveredmethods="30"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
@@ -55,28 +369,28 @@
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="92" count="0" type="stmt"/>
-        <line num="93" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="4" type="stmt"/>
+        <line num="58" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="3" type="stmt"/>
+        <line num="71" count="3" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="4" type="stmt"/>
+        <line num="93" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="99" count="1" type="stmt"/>
         <line num="100" count="1" type="stmt"/>
         <line num="101" count="1" type="stmt"/>
@@ -113,33 +427,33 @@
         <line num="166" count="2" type="stmt"/>
         <line num="168" count="1" type="stmt"/>
         <line num="173" count="3" type="stmt"/>
-        <line num="183" count="0" type="stmt"/>
-        <line num="184" count="0" type="stmt"/>
-        <line num="185" count="0" type="stmt"/>
-        <line num="187" count="0" type="stmt"/>
-        <line num="192" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="194" count="0" type="stmt"/>
-        <line num="195" count="0" type="stmt"/>
-        <line num="196" count="0" type="stmt"/>
-        <line num="199" count="0" type="stmt"/>
-        <line num="201" count="0" type="stmt"/>
-        <line num="202" count="0" type="stmt"/>
-        <line num="205" count="0" type="stmt"/>
-        <line num="208" count="0" type="stmt"/>
-        <line num="209" count="0" type="stmt"/>
-        <line num="211" count="0" type="stmt"/>
-        <line num="225" count="0" type="stmt"/>
-        <line num="226" count="0" type="stmt"/>
-        <line num="227" count="0" type="stmt"/>
-        <line num="228" count="0" type="stmt"/>
-        <line num="231" count="0" type="stmt"/>
+        <line num="183" count="3" type="stmt"/>
+        <line num="184" count="3" type="stmt"/>
+        <line num="185" count="3" type="stmt"/>
+        <line num="187" count="3" type="stmt"/>
+        <line num="192" count="36" type="cond" truecount="2" falsecount="0"/>
+        <line num="194" count="12" type="stmt"/>
+        <line num="195" count="12" type="stmt"/>
+        <line num="196" count="12" type="stmt"/>
+        <line num="199" count="24" type="stmt"/>
+        <line num="201" count="24" type="stmt"/>
+        <line num="202" count="24" type="stmt"/>
+        <line num="205" count="36" type="stmt"/>
+        <line num="208" count="36" type="stmt"/>
+        <line num="209" count="36" type="stmt"/>
+        <line num="211" count="36" type="stmt"/>
+        <line num="225" count="3" type="stmt"/>
+        <line num="226" count="3" type="stmt"/>
+        <line num="227" count="25" type="stmt"/>
+        <line num="228" count="24" type="stmt"/>
+        <line num="231" count="2" type="stmt"/>
       </file>
       <file name="produtosService.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/produtosService.ts">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
@@ -157,7 +471,7 @@
       </file>
       <file name="simulacoesService.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/simulacoesService.ts">
         <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -181,7 +495,7 @@
       </file>
       <file name="usuariosService.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/usuariosService.ts">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -201,34 +515,161 @@
         <line num="45" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="services.api">
-      <metrics statements="21" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+    <package name="caixa-app.services.api">
+      <metrics statements="21" coveredstatements="18" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="4"/>
       <file name="config.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/api/config.ts">
-        <metrics statements="15" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="3"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
       </file>
       <file name="errorHandler.ts" path="/home/Gab/Documentos/GitHub/caixa-app/services/api/errorHandler.ts">
-        <metrics statements="6" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="caixa-app.utils">
+      <metrics statements="112" coveredstatements="95" conditionals="65" coveredconditionals="54" methods="22" coveredmethods="16"/>
+      <file name="contratoUtils.ts" path="/home/Gab/Documentos/GitHub/caixa-app/utils/contratoUtils.ts">
+        <metrics statements="44" coveredstatements="28" conditionals="32" coveredconditionals="23" methods="13" coveredmethods="7"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="93" count="6" type="stmt"/>
+        <line num="95" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="96" count="2" type="stmt"/>
+        <line num="99" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="103" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="107" count="6" type="cond" truecount="5" falsecount="0"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="111" count="6" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+      </file>
+      <file name="financeUtils.ts" path="/home/Gab/Documentos/GitHub/caixa-app/utils/financeUtils.ts">
+        <metrics statements="30" coveredstatements="30" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="13" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
+        <line num="41" count="13" type="stmt"/>
+        <line num="43" count="13" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="57" count="6" type="stmt"/>
+        <line num="59" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="63" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="67" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="71" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="75" count="6" type="stmt"/>
+      </file>
+      <file name="formatters.ts" path="/home/Gab/Documentos/GitHub/caixa-app/utils/formatters.ts">
+        <metrics statements="14" coveredstatements="13" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="27" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="21" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="validators.ts" path="/home/Gab/Documentos/GitHub/caixa-app/utils/validators.ts">
+        <metrics statements="24" coveredstatements="24" conditionals="18" coveredconditionals="16" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="14" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="16" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="15" type="stmt"/>
+        <line num="22" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+        <line num="32" count="72" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="37" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="40" count="8" type="stmt"/>
+        <line num="41" count="80" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
+        <line num="45" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="46" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="7" type="stmt"/>
       </file>
     </package>
   </project>

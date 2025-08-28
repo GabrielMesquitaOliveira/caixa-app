@@ -7,7 +7,7 @@ describe('ContractsList Component', () => {
   const mockContratos: Contrato[] = [
     {
       id: '1',
-      produtoId: 1,
+      produtoId: '1',
       produto: {
         id: '1',
         nome: 'Empréstimo Pessoal',
@@ -64,7 +64,7 @@ describe('ContractsList Component', () => {
     
     expect(getByText('Seus Empréstimos')).toBeTruthy();
     expect(getByText('Empréstimo Pessoal')).toBeTruthy();
-    expect(getByText('12345')).toBeTruthy();
+    expect(getByText(/12345/)).toBeTruthy();
   });
 
   it('matches snapshot', () => {

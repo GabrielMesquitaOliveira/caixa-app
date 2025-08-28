@@ -60,6 +60,7 @@ export function Header({
         <TouchableOpacity 
           onPress={back ? handleBackPress : handleMenuPress} 
           className="p-2"
+          testID={back ? "back-button" : "menu-button"}
         >
           <MaterialIcons
             name={back ? "arrow-back" : "menu"}
@@ -76,7 +77,11 @@ export function Header({
         </View>
 
         {/* Right Side - Notificações */}
-        <TouchableOpacity onPress={handleNotificacoesPress} className="p-2">
+        <TouchableOpacity 
+          onPress={handleNotificacoesPress} 
+          className="p-2"
+          testID="notifications-button"
+        >
           <MaterialIcons
             name="notifications"
             size={24}

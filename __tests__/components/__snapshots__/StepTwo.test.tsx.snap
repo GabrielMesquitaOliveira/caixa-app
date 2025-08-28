@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepTwo Component matches snapshot 1`] = `
+<View
+  className="flex-1 justify-center items-center"
+>
+  <ActivityIndicator
+    color="#007AFF"
+    size="large"
+  />
+  <Text
+    className="mt-4 text-gray-600"
+  >
+    Carregando informações do produto...
+  </Text>
+</View>
+`;

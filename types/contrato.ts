@@ -3,7 +3,7 @@ import { ProdutoResumido } from './produto';
 // Interface principal do Contrato
 export interface Contrato {
   id: string;
-  produtoId: number;
+  produtoId: string;
   produto: ProdutoResumido;
   nomePersonalizado: string;
   valorContratado: number;

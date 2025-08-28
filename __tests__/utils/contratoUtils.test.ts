@@ -25,7 +25,7 @@ describe('contratoUtils', () => {
 
   const contratoMock: Contrato = {
     id: '123',
-    produtoId: 1,
+    produtoId: '1',
     produto: {
       id: '1',
       nome: 'Empréstimo Pessoal',

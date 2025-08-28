@@ -56,7 +56,7 @@ exports[`ParcelasVencendoEsteMes Component matches snapshot 1`] = `
       <Text
         className="text-sm font-medium text-red-600"
       >
-        Vencida há 590 dias
+        Vencida há 591 dias
       </Text>
     </View>
   </View>

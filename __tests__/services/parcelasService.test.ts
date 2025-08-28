@@ -204,4 +204,188 @@ describe('parcelasService', () => {
     expect(buscarPorContratoSpy).toHaveBeenCalledWith('contrato-1');
     buscarPorContratoSpy.mockRestore();
   });
+
+  it('should find parcels due in the next 30 days', async () => {
+    const hoje = new Date();
+    const proximoMes = new Date(hoje.getTime() + 30 * 24 * 60 * 60 * 1000);
+    
+    const mockParcelas = [
+      { 
+        id: '1', 
+        dataVencimento: hoje.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '2', 
+        dataVencimento: proximoMes.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '3', 
+        dataVencimento: new Date(hoje.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '4', 
+        dataVencimento: new Date(proximoMes.getTime() + 1 * 24 * 60 * 60 * 1000).toISOString(),
+        situacao: 'pendente' as const
+      },
+    ];
+
+    apiMock.get.mockResolvedValueOnce({ data: mockParcelas });
+
+    const parcelas = await parcelasService.buscarProximasVencer();
+    
+    // Should only include parcels with due date between today and next month
+    expect(parcelas).toHaveLength(2);
+    expect(parcelas.map(p => p.id)).toEqual(['1', '2']);
+    expect(apiMock.get).toHaveBeenCalledWith('/parcelas?situacao=pendente');
+  });
+
+  it('should find overdue parcels', async () => {
+    const hoje = new Date();
+    const ontem = new Date(hoje.getTime() - 1 * 24 * 60 * 60 * 1000);
+    const amanha = new Date(hoje.getTime() + 1 * 24 * 60 * 60 * 1000);
+    
+    const mockParcelas = [
+      { 
+        id: '1', 
+        dataVencimento: ontem.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '2', 
+        dataVencimento: hoje.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '3', 
+        dataVencimento: amanha.toISOString(),
+        situacao: 'pendente' as const
+      },
+    ];
+
+    apiMock.get.mockResolvedValueOnce({ data: mockParcelas });
+
+    const parcelas = await parcelasService.buscarVencidas();
+    
+    // Should only include overdue parcels (before today)
+    expect(parcelas).toHaveLength(1);
+    expect(parcelas[0].id).toBe('1');
+    expect(parcelas[0].diasAtraso).toBe(1); // 1 day overdue
+    expect(apiMock.get).toHaveBeenCalledWith('/parcelas?situacao=pendente');
+  });
+
+  it('should find parcels due this month', async () => {
+    const hoje = new Date();
+    const primeiroDiaMes = new Date(hoje.getFullYear(), hoje.getMonth(), 1);
+    const ultimoDiaMes = new Date(hoje.getFullYear(), hoje.getMonth() + 1, 0);
+    
+    const mockParcelas = [
+      { 
+        id: '1', 
+        dataVencimento: primeiroDiaMes.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '2', 
+        dataVencimento: ultimoDiaMes.toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '3', 
+        dataVencimento: new Date(primeiroDiaMes.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+        situacao: 'pendente' as const
+      },
+      { 
+        id: '4', 
+        dataVencimento: new Date(ultimoDiaMes.getTime() + 1 * 24 * 60 * 60 * 1000).toISOString(),
+        situacao: 'pendente' as const
+      },
+    ];
+
+    apiMock.get.mockResolvedValueOnce({ data: mockParcelas });
+
+    const parcelas = await parcelasService.buscarVencendoEsteMes();
+    
+    // Should only include parcels due this month
+    expect(parcelas).toHaveLength(2);
+    expect(parcelas.map(p => p.id)).toEqual(['1', '2']);
+    expect(apiMock.get).toHaveBeenCalledWith('/parcelas?situacao=pendente');
+  });
+
+  it('should generate parcels for a contract using PRICE system', async () => {
+    const mockParcela = { 
+      id: '1', 
+      contratoId: 'contrato-1',
+      numeroParcela: 1,
+      dataVencimento: new Date().toISOString(),
+      valorParcela: 1000,
+      valorJuros: 100,
+      valorAmortizacao: 900,
+      saldoDevedor: 9000,
+      situacao: 'pendente' as const,
+      diasAtraso: 0
+    };
+
+    // Mock the criar method to return mock parcels
+    const criarSpy = jest.spyOn(parcelasService, 'criar')
+      .mockResolvedValue(mockParcela);
+
+    const parcelas = await parcelasService.gerarParcelas('contrato-1', 10000, 12, 12, 'PRICE');
+    
+    // Should create 12 parcels
+    expect(parcelas).toHaveLength(12);
+    expect(criarSpy).toHaveBeenCalledTimes(12);
+    
+    // Check that each call has the correct contract ID
+    criarSpy.mock.calls.forEach(call => {
+      expect(call[0].contratoId).toBe('contrato-1');
+    });
+
+    criarSpy.mockRestore();
+  });
+
+  it('should generate parcels for a contract using SAC system', async () => {
+    const mockParcela = { 
+      id: '1', 
+      contratoId: 'contrato-1',
+      numeroParcela: 1,
+      dataVencimento: new Date().toISOString(),
+      valorParcela: 1000,
+      valorJuros: 100,
+      valorAmortizacao: 900,
+      saldoDevedor: 9000,
+      situacao: 'pendente' as const,
+      diasAtraso: 0
+    };
+
+    // Mock the criar method to return mock parcels
+    const criarSpy = jest.spyOn(parcelasService, 'criar')
+      .mockResolvedValue(mockParcela);
+
+    const parcelas = await parcelasService.gerarParcelas('contrato-1', 10000, 12, 12, 'SAC');
+    
+    // Should create 12 parcels
+    expect(parcelas).toHaveLength(12);
+    expect(criarSpy).toHaveBeenCalledTimes(12);
+    
+    // Check that each call has the correct contract ID
+    criarSpy.mock.calls.forEach(call => {
+      expect(call[0].contratoId).toBe('contrato-1');
+    });
+
+    criarSpy.mockRestore();
+  });
+
+  it('should handle error when generating parcels', async () => {
+    // Mock the criar method to throw an error
+    const criarSpy = jest.spyOn(parcelasService, 'criar')
+      .mockRejectedValue(new Error('API Error'));
+
+    await expect(parcelasService.gerarParcelas('contrato-1', 10000, 12, 12, 'PRICE'))
+      .rejects.toThrow('API Error');
+
+    criarSpy.mockRestore();
+  });
 });
