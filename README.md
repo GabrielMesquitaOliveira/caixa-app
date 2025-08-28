@@ -1,4 +1,7 @@
+
 # Caixa App
+
+![Screenshot da aplicação](./assets/images/Screenshot_2025-08-27-14-48-51-186_host.exp.exponent.jpg)
 
 ## Descrição
 
